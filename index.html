@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5CFCX3V2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H5CFCX3V2');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NewYaka — Özel Yazılım ve Otomasyon Çözümleri</title>
@@ -8,9 +17,11 @@
 <meta name="theme-color" content="#070B14">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="dark">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --bg: #070B14;
@@ -31,7 +42,12 @@
   }
 
   *{ box-sizing: border-box; margin:0; padding:0; }
-  html{ scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   body{
     background: var(--bg);
     color: var(--text);
@@ -40,98 +56,304 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  h1,h2,h3,h4{ font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
-  a{ color: inherit; text-decoration: none; }
-  img{ max-width:100%; display:block; }
-  ul{ list-style:none; }
 
-  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+  h1,h2,h3,h4{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
 
-  /* ---------- Arka plan kod akışı ---------- */
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img{
+    max-width:100%;
+    display:block;
+  }
+
+  ul{
+    list-style:none;
+  }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
   #codeBg{
-    position: fixed; inset: 0; width: 100%; height: 100%;
-    z-index: -1; pointer-events: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
     opacity: 0.32;
-    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 55%, transparent 100%);
-    mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 55%, transparent 100%);
+    -webkit-mask-image: radial-gradient(
+      ellipse 90% 80% at 50% 40%,
+      #000 55%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 90% 80% at 50% 40%,
+      #000 55%,
+      transparent 100%
+    );
   }
 
   @media (prefers-reduced-motion: reduce){
-    *{ animation: none !important; transition: none !important; }
+    *{
+      animation: none !important;
+      transition: none !important;
+    }
   }
 
   /* ---------- Nav ---------- */
+
   header.nav{
-    position: fixed; top:0; left:0; right:0; z-index: 100;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
     background: rgba(7,11,20,0.72);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid transparent;
     transition: border-color .3s ease, background .3s ease;
   }
-  header.nav.scrolled{ border-bottom-color: var(--border); background:rgba(7,11,20,.86); }
-  @media (max-width:640px){ .nav-cta{display:none;} }
-  .nav-inner{ display:flex; align-items:center; justify-content: space-between; padding: 18px 32px; max-width: var(--maxw); margin:0 auto; }
-  .logo{ display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:700; font-size:1.15rem; }
-  .logo-mark{ width:28px; height:28px; }
-  .nav-links{ display:flex; gap: 34px; }
-  .nav-links a{ font-size: 0.92rem; color: var(--text-dim); transition: color .2s; cursor: pointer; }
-  .nav-links a:hover{ color: var(--text); }
-  .nav-cta{
-    padding: 10px 20px; border-radius: 999px; background: var(--accent-grad);
-    color: #05070D; font-weight: 600; font-size: 0.88rem;
+
+  header.nav.scrolled{
+    border-bottom-color: var(--border);
+    background:rgba(7,11,20,.86);
   }
+
+  @media (max-width:640px){
+    .nav-cta{
+      display:none;
+    }
+  }
+
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    max-width: var(--maxw);
+    margin:0 auto;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Space Grotesk';
+    font-weight:700;
+    font-size:1.15rem;
+  }
+
+  .logo-mark{
+    width:28px;
+    height:28px;
+  }
+
+  .nav-links{
+    display:flex;
+    gap: 34px;
+  }
+
+  .nav-links a{
+    font-size: 0.92rem;
+    color: var(--text-dim);
+    transition: color .2s;
+    cursor: pointer;
+  }
+
+  .nav-links a:hover{
+    color: var(--text);
+  }
+
+  .nav-cta{
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: var(--accent-grad);
+    color: #05070D;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+
   .nav-toggle{
-    display:flex; flex-direction:column; justify-content:center; gap:5px;
-    width:40px; height:40px; padding:9px 8px; margin-left:8px;
-    background:none; border:1px solid var(--border); border-radius:10px; cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:40px;
+    height:40px;
+    padding:9px 8px;
+    margin-left:8px;
+    background:none;
+    border:1px solid var(--border);
+    border-radius:10px;
+    cursor:pointer;
     transition: border-color .2s ease;
   }
-  .nav-toggle:hover{ border-color: var(--border-strong); }
-  .nav-toggle span{ display:block; height:2px; width:100%; background: var(--text); border-radius:2px; transition: transform .3s ease, opacity .2s ease; }
-  .nav-toggle.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2){ opacity:0; }
-  .nav-toggle.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-toggle:hover{
+    border-color: var(--border-strong);
+  }
+
+  .nav-toggle span{
+    display:block;
+    height:2px;
+    width:100%;
+    background: var(--text);
+    border-radius:2px;
+    transition: transform .3s ease, opacity .2s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2){
+    opacity:0;
+  }
+
+  .nav-toggle.open span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
   .menu-panel{
-    max-height:0; overflow:hidden;
+    max-height:0;
+    overflow:hidden;
     border-top: 1px solid transparent;
     background: rgba(10,14,24,0.96);
     backdrop-filter: blur(14px);
     transition: max-height .4s ease, border-color .3s ease;
   }
-  .menu-panel.open{ max-height: 620px; border-top-color: var(--border); }
-  .menu-panel-inner{
-    max-width: var(--maxw); margin:0 auto; padding: 30px 32px 36px;
-    display:grid; grid-template-columns: 1fr 1fr; gap: 40px;
+
+  .menu-panel.open{
+    max-height: 620px;
+    border-top-color: var(--border);
   }
-  .menu-group{ display:flex; flex-direction:column; gap:6px; }
-  .menu-label{ color: var(--accent-b); font-size:0.78rem; font-weight:600; margin-bottom:10px; letter-spacing:.04em; }
-  .menu-group > a{ color: var(--text-dim); font-size:0.98rem; padding:8px 0; transition: color .2s; cursor: pointer; }
-  .menu-group > a:hover{ color: var(--text); }
-  .menu-contact{ display:flex !important; align-items:center; gap:12px; padding:10px 0 !important; }
-  .mc-icn{ width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .mc-icn.wa{ background: rgba(37,211,102,0.12); }
-  .mc-icn.ig{ background: rgba(228,64,95,0.14); }
-  .mc-icn.mail{ background: rgba(46,107,255,0.14); }
-  .mc-icn svg{ width:18px; height:18px; }
-  .menu-contact > span{ display:flex; flex-direction:column; line-height:1.35; }
-  .menu-contact strong{ color: var(--text); font-size:0.92rem; font-weight:600; }
-  .menu-contact em{ color: var(--text-dim); font-size:0.82rem; font-style:normal; }
+
+  .menu-panel-inner{
+    max-width: var(--maxw);
+    margin:0 auto;
+    padding: 30px 32px 36px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .menu-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .menu-label{
+    color: var(--accent-b);
+    font-size:0.78rem;
+    font-weight:600;
+    margin-bottom:10px;
+    letter-spacing:.04em;
+  }
+
+  .menu-group > a{
+    color: var(--text-dim);
+    font-size:0.98rem;
+    padding:8px 0;
+    transition: color .2s;
+    cursor: pointer;
+  }
+
+  .menu-group > a:hover{
+    color: var(--text);
+  }
+
+  .menu-contact{
+    display:flex !important;
+    align-items:center;
+    gap:12px;
+    padding:10px 0 !important;
+  }
+
+  .mc-icn{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  .mc-icn.wa{
+    background: rgba(37,211,102,0.12);
+  }
+
+  .mc-icn.ig{
+    background: rgba(228,64,95,0.14);
+  }
+
+  .mc-icn.mail{
+    background: rgba(46,107,255,0.14);
+  }
+
+  .mc-icn svg{
+    width:18px;
+    height:18px;
+  }
+
+  .menu-contact > span{
+    display:flex;
+    flex-direction:column;
+    line-height:1.35;
+  }
+
+  .menu-contact strong{
+    color: var(--text);
+    font-size:0.92rem;
+    font-weight:600;
+  }
+
+  .menu-contact em{
+    color: var(--text-dim);
+    font-size:0.82rem;
+    font-style:normal;
+  }
 
   @media (max-width: 860px){
-    .nav-links{ display:none; }
-    .nav-cta{ padding: 9px 16px; font-size: 0.82rem; }
-    .menu-panel-inner{ grid-template-columns: 1fr; gap: 28px; }
+    .nav-links{
+      display:none;
+    }
+
+    .nav-cta{
+      padding: 9px 16px;
+      font-size: 0.82rem;
+    }
+
+    .menu-panel-inner{
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
   }
 
   /* ---------- Hero ---------- */
+
   .hero{
     position: relative;
     padding: 190px 0 140px;
     overflow: hidden;
   }
+
   .hero-glow{
-    position: absolute; inset: -20% -10% auto -10%; height: 900px;
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 900px;
     background:
       radial-gradient(circle at 22% 30%, rgba(46,107,255,0.30), transparent 55%),
       radial-gradient(circle at 78% 15%, rgba(34,211,238,0.20), transparent 50%),
@@ -140,65 +362,208 @@
     animation: drift 18s ease-in-out infinite alternate;
     pointer-events: none;
   }
+
   @keyframes drift{
-    from{ transform: translate3d(0,0,0) scale(1); }
-    to{ transform: translate3d(0,30px,0) scale(1.05); }
+    from{
+      transform: translate3d(0,0,0) scale(1);
+    }
+
+    to{
+      transform: translate3d(0,30px,0) scale(1.05);
+    }
   }
-  .hero-inner{ position: relative; max-width: 780px; }
-  .hero-eyebrow{ display:flex; align-items:center; gap:10px; color: var(--text-dim); font-size: 0.92rem; margin-bottom: 26px; }
-  .hero-eyebrow .dot{ width:7px; height:7px; border-radius:50%; background: var(--accent-b); box-shadow: 0 0 10px var(--accent-b); }
+
+  .hero-inner{
+    position: relative;
+    max-width: 780px;
+  }
+
+  .hero-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    margin-bottom: 26px;
+  }
+
+  .hero-eyebrow .dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background: var(--accent-b);
+    box-shadow: 0 0 10px var(--accent-b);
+  }
+
   .hero h1{
     font-size: clamp(2.4rem, 5vw, 3.6rem);
     line-height: 1.1;
     max-width: 760px;
-    opacity:0; transform: translateY(16px);
+    opacity:0;
+    transform: translateY(16px);
     animation: rise .8s ease forwards .1s;
   }
+
   .hero p.lead{
-    margin-top: 24px; font-size: 1.12rem; color: var(--text-dim); max-width: 560px;
-    opacity:0; transform: translateY(16px);
+    margin-top: 24px;
+    font-size: 1.12rem;
+    color: var(--text-dim);
+    max-width: 560px;
+    opacity:0;
+    transform: translateY(16px);
     animation: rise .8s ease forwards .25s;
   }
-  @keyframes rise{ to{ opacity:1; transform: translateY(0); } }
-  .hero-ctas{ display:flex; gap:16px; margin-top: 40px; flex-wrap: wrap;
-    opacity:0; transform: translateY(16px);
+
+  @keyframes rise{
+    to{
+      opacity:1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-ctas{
+    display:flex;
+    gap:16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    opacity:0;
+    transform: translateY(16px);
     animation: rise .8s ease forwards .4s;
   }
+
   .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding: 15px 28px; border-radius: 999px; font-weight: 600; font-size: 0.96rem;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.96rem;
     transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    cursor:pointer; border: 1px solid transparent;
+    cursor:pointer;
+    border: 1px solid transparent;
   }
-  .btn-primary{ background: var(--accent-grad); color: #05070D; }
-  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(46,107,255,0.35); }
-  .btn-ghost{ border-color: var(--border-strong); color: var(--text); }
-  .btn-ghost:hover{ border-color: var(--accent-b); color: var(--accent-b); transform: translateY(-2px); }
+
+  .btn-primary{
+    background: var(--accent-grad);
+    color: #05070D;
+  }
+
+  .btn-primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(46,107,255,0.35);
+  }
+
+  .btn-ghost{
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+
+  .btn-ghost:hover{
+    border-color: var(--accent-b);
+    color: var(--accent-b);
+    transform: translateY(-2px);
+  }
 
   /* ---------- Section shells ---------- */
-  section{ padding: 120px 0; position: relative; }
-  .section-head{ max-width: 620px; margin-bottom: 56px; }
-  .section-tag{ color: var(--accent-b); font-size: 0.9rem; font-weight: 600; margin-bottom: 14px; }
-  .section-head h2{ font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin-bottom: 16px; }
-  .section-head p{ color: var(--text-dim); font-size: 1.02rem; }
+
+  section{
+    padding: 120px 0;
+    position: relative;
+  }
+
+  .section-head{
+    max-width: 620px;
+    margin-bottom: 56px;
+  }
+
+  .section-tag{
+    color: var(--accent-b);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .section-head h2{
+    font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+    margin-bottom: 16px;
+  }
+
+  .section-head p{
+    color: var(--text-dim);
+    font-size: 1.02rem;
+  }
 
   /* ---------- About ---------- */
-  .about{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; align-items: start; }
-  .about-copy p{ color: var(--text-dim); margin-bottom: 18px; font-size: 1.02rem; }
-  .about-copy p:first-child{ color: var(--text); font-size: 1.12rem; }
-  .why-list{ display:flex; flex-direction:column; gap: 22px; }
-  .why-item{ display:flex; gap: 18px; padding: 20px 0; border-top: 1px solid var(--border); }
-  .why-item:last-child{ border-bottom: 1px solid var(--border); }
-  .why-num{ font-family:'Space Grotesk'; color: var(--text-dimmer); font-size: 0.95rem; padding-top:2px; min-width: 26px; }
-  .why-item h4{ font-size: 1.02rem; margin-bottom: 6px; }
-  .why-item p{ color: var(--text-dim); font-size: 0.95rem; }
 
-  @media (max-width: 900px){ .about{ grid-template-columns: 1fr; gap: 48px; } }
+  .about{
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .about-copy p{
+    color: var(--text-dim);
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+  }
+
+  .about-copy p:first-child{
+    color: var(--text);
+    font-size: 1.12rem;
+  }
+
+  .why-list{
+    display:flex;
+    flex-direction:column;
+    gap: 22px;
+  }
+
+  .why-item{
+    display:flex;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .why-item:last-child{
+    border-bottom: 1px solid var(--border);
+  }
+
+  .why-num{
+    font-family:'Space Grotesk';
+    color: var(--text-dimmer);
+    font-size: 0.95rem;
+    padding-top:2px;
+    min-width: 26px;
+  }
+
+  .why-item h4{
+    font-size: 1.02rem;
+    margin-bottom: 6px;
+  }
+
+  .why-item p{
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 900px){
+    .about{
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
 
   /* ---------- Services ---------- */
+
   .services-grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
   }
+
   .service-card{
     background: var(--surface);
     border: 1px solid var(--border);
@@ -206,814 +571,2067 @@
     padding: 30px 26px;
     transition: border-color .25s ease, transform .25s ease, background .25s ease;
   }
+
   .service-card:hover{
     border-color: var(--border-strong);
     transform: translateY(-4px);
     background: var(--surface-2);
   }
-  .service-icon{
-    width: 44px; height:44px; border-radius: 12px;
-    display:flex; align-items:center; justify-content:center;
-    background: rgba(46,107,255,0.12); border: 1px solid rgba(46,107,255,0.25);
-    margin-bottom: 20px;
-  }
-  .service-icon svg{ width:22px; height:22px; stroke: var(--accent-b); fill:none; stroke-width:1.6; }
-  .service-card h3{ font-size: 1.05rem; margin-bottom: 10px; }
-  .service-card p{ color: var(--text-dim); font-size: 0.93rem; }
 
-  @media (max-width: 980px){ .services-grid{ grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 640px){ .services-grid{ grid-template-columns: 1fr; } }
+  .service-icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(46,107,255,.10);
+    margin-bottom:20px;
+  }
+
+  .service-icon svg{
+    width:24px;
+    height:24px;
+    fill:none;
+    stroke:var(--accent-b);
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  .service-card h3{
+    font-size:1.08rem;
+    margin-bottom:10px;
+  }
+
+  .service-card p{
+    color:var(--text-dim);
+    font-size:.94rem;
+  }
+
+  @media(max-width:900px){
+    .services-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+
+  @media(max-width:600px){
+    .services-grid{
+      grid-template-columns:1fr;
+    }
+  }
 
   /* ---------- Process ---------- */
-  .process{ display:flex; flex-direction:column; }
-  .process-row{
-    display:grid; grid-template-columns: 90px 1fr; gap: 28px;
-    padding: 30px 0; border-top: 1px solid var(--border);
+
+  .process-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    border-top:1px solid var(--border);
   }
-  .process-row:last-child{ border-bottom: 1px solid var(--border); }
+
+  .process-item{
+    padding:30px 26px 30px 0;
+    border-bottom:1px solid var(--border);
+  }
+
+  .process-item:not(:last-child){
+    margin-right:30px;
+  }
+
   .process-num{
-    font-family:'Space Grotesk'; font-size: 1.6rem; font-weight: 600;
-    background: var(--accent-grad); -webkit-background-clip: text; background-clip:text; color: transparent;
+    color:var(--accent-b);
+    font-family:'Space Grotesk';
+    font-size:.85rem;
+    margin-bottom:20px;
   }
-  .process-row h4{ font-size: 1.12rem; margin-bottom: 8px; }
-  .process-row p{ color: var(--text-dim); font-size: 0.97rem; max-width: 560px; }
 
-  /* ---------- Use cases ---------- */
-  .cases-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
-  .case-card{
-    background: linear-gradient(160deg, var(--surface), var(--surface) 60%, rgba(46,107,255,0.06));
-    border: 1px solid var(--border);
-    border-radius: var(--radius-m);
-    padding: 28px 24px;
+  .process-item h3{
+    font-size:1.05rem;
+    margin-bottom:8px;
   }
-  .case-card .case-label{ color: var(--accent-b); font-size: 0.82rem; font-weight: 600; margin-bottom: 12px; }
-  .case-card p{ color: var(--text-dim); font-size: 0.96rem; }
-  @media (max-width: 900px){ .cases-grid{ grid-template-columns: 1fr; } }
 
-  .quote-block{
-    margin-top: 44px; padding: 26px 28px; border-radius: var(--radius-m);
-    border: 1px solid var(--border); background: var(--surface);
-    display:flex; gap: 16px; align-items:flex-start; max-width: 640px;
+  .process-item p{
+    color:var(--text-dim);
+    font-size:.92rem;
   }
-  .quote-mark{ font-family:'Space Grotesk'; font-size: 2rem; color: var(--accent-b); line-height:1; }
-  .quote-block p{ color: var(--text-dim); font-size: 0.97rem; }
-  .quote-block span{ display:block; margin-top:10px; color: var(--text-dimmer); font-size: 0.85rem; }
 
-  .reviews-head{ margin-top: 64px; margin-bottom: 32px; }
-  .reviews-head h3{ font-size: 1.4rem; margin-bottom: 8px; }
-  .reviews-head p{ color: var(--text-dim); font-size: 0.98rem; }
-  .reviews-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  @media(max-width:900px){
+    .process-list{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+
+  @media(max-width:600px){
+    .process-list{
+      grid-template-columns:1fr;
+    }
+  }
+
+  /* ---------- Scenarios ---------- */
+
+  .scenario-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+  }
+
   .review-card{
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius-m); padding: 26px 24px;
-    display:flex; flex-direction:column; gap:16px;
-    transition: border-color .25s ease, transform .25s ease;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-m);
+    padding:28px;
   }
-  .review-card:hover{ border-color: var(--border-strong); transform: translateY(-4px); }
-  .review-stars{ display:flex; gap:3px; }
-  .review-stars svg{ width:16px; height:16px; fill: #F5B94A; }
-  .review-stars svg.empty{ fill: rgba(255,255,255,0.16); }
-  .review-card p{ color: var(--text); font-size: 0.96rem; line-height:1.55; }
-  .review-author{ display:flex; align-items:center; gap:12px; margin-top:auto; }
-  .review-avatar{
-    width:40px; height:40px; border-radius:50%; flex-shrink:0;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Space Grotesk'; font-weight:600; font-size:0.95rem; color:#05070D;
-    background: var(--accent-grad);
+
+  .review-card p{
+    color:var(--text);
+    font-size:.95rem;
+    line-height:1.7;
   }
-  .review-author .ra-name{ font-size:0.9rem; font-weight:600; color: var(--text); }
-  .review-author .ra-role{ font-size:0.82rem; color: var(--text-dim); }
-  @media (max-width: 900px){ .reviews-grid{ grid-template-columns: 1fr; } }
+
+  @media(max-width:700px){
+    .scenario-grid{
+      grid-template-columns:1fr;
+    }
+  }
 
   /* ---------- Contact ---------- */
-  .contact{ display:grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items:start; }
-  .contact-info p{ color: var(--text-dim); margin-bottom: 30px; max-width: 420px; }
-  .contact-channels{ display:flex; flex-direction:column; gap: 14px; }
-  .channel{
-    display:flex; align-items:center; gap: 14px;
-    padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-s);
-    transition: border-color .2s ease, transform .2s ease;
+
+  .contact{
+    display:grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap:72px;
+    align-items:start;
   }
-  .channel:hover{ border-color: var(--border-strong); transform: translateX(4px); }
-  .channel .icn{ width: 38px; height:38px; border-radius: 10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .icn.wa{ background: rgba(37,211,102,0.12); }
-  .icn.ig{ background: rgba(228,64,95,0.14); }
-  .icn.mail{ background: rgba(46,107,255,0.14); }
-  .icn svg{ width:19px; height:19px; }
-  .channel .ch-title{ font-size: 0.92rem; font-weight:600; }
-  .channel .ch-sub{ font-size: 0.85rem; color: var(--text-dim); }
+
+  .contact-info > p{
+    color:var(--text-dim);
+    max-width:500px;
+    margin-bottom:28px;
+  }
+
+  .contact-channels{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .channel{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:rgba(255,255,255,.018);
+    transition:transform .2s ease,border-color .2s ease;
+  }
+
+  .channel:hover{
+    transform:translateY(-2px);
+    border-color:var(--border-strong);
+  }
+
+  .icn{
+    width:42px;
+    height:42px;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  .icn.wa{
+    background:rgba(37,211,102,.10);
+  }
+
+  .icn.ig{
+    background:rgba(228,64,95,.10);
+  }
+
+  .icn.mail{
+    background:rgba(46,107,255,.10);
+  }
+
+  .icn svg{
+    width:22px;
+    height:22px;
+  }
+
+  .ch-title{
+    font-weight:600;
+    font-size:.92rem;
+  }
+
+  .ch-sub{
+    color:var(--text-dim);
+    font-size:.82rem;
+  }
 
   .form{
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l);
-    padding: 36px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-l);
+    padding:30px;
+    box-shadow:0 25px 70px rgba(0,0,0,.20);
   }
-  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .field{ margin-bottom: 18px; }
-  .field label{ display:block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 8px; }
-  .field input, .field textarea{
-    width:100%; background: var(--bg); border: 1px solid var(--border);
-    border-radius: var(--radius-s); padding: 13px 14px; color: var(--text); font-family:'Inter';
-    font-size: 0.94rem; transition: border-color .2s ease;
-  }
-  .field input:focus, .field textarea:focus{ outline:none; border-color: var(--accent-b); }
-  .field textarea{ resize: vertical; min-height: 110px; }
-  .form button{ width:100%; border:none; cursor:pointer; margin-top: 6px; }
 
-  @media (max-width: 900px){ .contact{ grid-template-columns: 1fr; gap: 48px; } .form-row{ grid-template-columns: 1fr; } }
+  .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+
+  .field{
+    margin-bottom:18px;
+  }
+
+  .field label{
+    display:block;
+    margin-bottom:7px;
+    font-size:.84rem;
+    color:var(--text-dim);
+  }
+
+  .field input,
+  .field textarea{
+    width:100%;
+    background:rgba(5,9,17,.72);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:11px;
+    padding:13px 14px;
+    outline:none;
+    font:inherit;
+    transition:border-color .2s ease,box-shadow .2s ease;
+  }
+
+  .field input:focus,
+  .field textarea:focus{
+    border-color:var(--accent-b);
+    box-shadow:0 0 0 3px rgba(34,211,238,.08);
+  }
+
+  .field textarea{
+    min-height:140px;
+    resize:vertical;
+  }
+
+  .form button{
+    width:100%;
+    justify-content:center;
+  }
+
+  .form-status{
+    margin-top:14px;
+    font-size:.9rem;
+  }
+
+  .form-status.success{
+    color:#6be6ad;
+  }
+
+  .form-status.error{
+    color:#ff7d7d;
+  }
+
+  @media(max-width:900px){
+    .contact{
+      grid-template-columns:1fr;
+      gap:48px;
+    }
+  }
+
+  @media(max-width:600px){
+    .form-row{
+      grid-template-columns:1fr;
+    }
+
+    .form{
+      padding:22px;
+    }
+  }
 
   /* ---------- Footer ---------- */
-  footer{ border-top: 1px solid var(--border); padding: 48px 0; }
-  .footer-inner{ display:flex; justify-content: space-between; align-items:center; flex-wrap: wrap; gap: 20px; }
-  .footer-links{ display:flex; gap: 28px; }
-  .footer-links a{ color: var(--text-dim); font-size: 0.9rem; transition: color .2s; cursor: pointer; }
-  .footer-links a:hover{ color: var(--text); }
-  .footer-copy{ color: var(--text-dimmer); font-size: 0.85rem; width:100%; margin-top: 8px; }
 
-  /* ---------- Reveal on scroll ---------- */
-  .reveal{ opacity:0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-  .reveal.in{ opacity:1; transform: translateY(0); }
-
-  /* ---------- V2 refinements ---------- */
-  .hero-inner{ max-width: 860px; }
-  .hero h1{ max-width: 840px; }
-  .hero p.lead{ max-width: 660px; }
-  .hero-kicker{
-    display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;
-    color:var(--text-dimmer); font-size:.86rem;
-  }
-  .hero-kicker a{ color:inherit; text-decoration:none; cursor:pointer; transition:transform .2s ease, border-color .2s ease, background .2s ease; }
-.hero-kicker a:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.18); background:rgba(255,255,255,.055); }
-.hero-kicker a:focus-visible{ outline:2px solid var(--accent-b); outline-offset:3px; }
-.hero-kicker span{
-    padding:7px 11px; border:1px solid var(--border);
-    border-radius:999px; background:rgba(255,255,255,.025);
-  }
-  .section-divider{
-    width:100%; height:1px; margin:0;
-    background:linear-gradient(90deg, transparent, var(--border-strong), transparent);
-  }
-  .solution-note{
-    margin-top:34px; padding:20px 22px; border:1px solid var(--border);
-    border-radius:var(--radius-m); background:rgba(255,255,255,.018);
-  }
-  .solution-note strong{ display:block; margin-bottom:5px; font-family:'Space Grotesk'; }
-  .solution-note span{ color:var(--text-dim); font-size:.92rem; }
-  .form-note{
-    margin-top:12px; color:var(--text-dimmer); font-size:.78rem; line-height:1.5;
-  }
-  .form-status{
-    min-height:20px; margin-top:10px; color:var(--accent-b);
-    font-size:.84rem;
-  }
-  .field input::placeholder,.field textarea::placeholder{ color:#5f687b; }
-  .btn:focus-visible,.nav-toggle:focus-visible,.nav-links a:focus-visible,
-  .footer-links a:focus-visible,.channel:focus-visible,.menu-group>a:focus-visible{
-    outline:2px solid var(--accent-b); outline-offset:3px;
-  }
-  @media (max-width:640px){
-    .reviews-grid[style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr !important;}
-    .wrap{ padding:0 20px; }
-    .nav-inner{ padding:15px 20px; }
-    .hero{ padding:150px 0 105px; }
-    section{ padding:88px 0; }
-    .form{ padding:24px 20px; }
-    .hero-kicker{ gap:7px; }
-    .hero-kicker span{ font-size:.78rem; }
+  footer{
+    background:rgba(4,7,13,.35);
+    border-top:1px solid var(--border);
   }
 
-
-.form-status.success { color: #62e6a7; }
-.form-status.error { color: #ff8b8b; }
-.form button[type="submit"]:disabled { opacity: .65; cursor: wait; }
-
-  /* ---------- Premium visual layer ---------- */
-  body{
-    background:
-      radial-gradient(circle at 50% -10%, rgba(46,107,255,.09), transparent 34%),
-      var(--bg);
+  .footer-inner{
+    padding-top:30px;
+    padding-bottom:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    flex-wrap:wrap;
   }
-  body::before{
-    content:"";
-    position:fixed; inset:0; pointer-events:none; z-index:-2;
-    background-image:
-      linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
-    background-size:72px 72px;
-    mask-image:linear-gradient(to bottom, rgba(0,0,0,.65), transparent 72%);
+
+  .footer-links{
+    display:flex;
+    gap:20px;
+    color:var(--text-dim);
+    font-size:.86rem;
   }
-  #codeBg{ opacity:.46; mix-blend-mode:screen; }
-  .hero{ min-height:760px; display:flex; align-items:center; padding-top:170px; }
+
+  .footer-links a{
+    cursor:pointer;
+  }
+
+  .footer-copy{
+    color:var(--text-dimmer);
+    font-size:.8rem;
+  }
+
+  /* ---------- Animations ---------- */
+
+  .reveal{
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .7s ease,transform .7s ease;
+  }
+
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- Premium Hero ---------- */
+
   .hero-inner{
-    max-width:var(--maxw);
+    max-width: none;
     display:grid;
-    grid-template-columns:minmax(0,1.03fr) minmax(390px,.97fr);
-    gap:64px;
+    grid-template-columns: 1fr 1fr;
+    gap:70px;
     align-items:center;
   }
-  .hero-copy{ position:relative; z-index:2; }
-  .hero h1{ max-width:780px; font-size:clamp(2.7rem,5.2vw,4.65rem); letter-spacing:-.045em; }
-  .hero h1 span{
-    background:linear-gradient(120deg,#4d7cff 10%,#5ee7ff 90%);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
+
+  .hero-copy{
+    position:relative;
+    z-index:2;
   }
-  .hero p.lead{ max-width:650px; font-size:1.08rem; line-height:1.8; }
-  .hero-kicker{ margin-top:28px; }
-  .hero-kicker a{
-    color:#aeb8cc;
-    border-color:rgba(255,255,255,.10);
-    background:rgba(255,255,255,.025);
-    backdrop-filter:blur(8px);
-  }
-  .hero-kicker a:hover{ color:var(--text); border-color:rgba(77,124,255,.45); box-shadow:0 8px 25px rgba(46,107,255,.12); }
-  .hero-ctas{ margin-top:34px; }
-  .btn{ box-shadow:0 8px 25px rgba(0,0,0,.14); }
-  .btn-primary{ box-shadow:0 10px 32px rgba(46,107,255,.22); }
-  .btn-arrow{ font-size:1.05em; opacity:.75; transition:transform .2s; }
-  .btn:hover .btn-arrow{ transform:translate(2px,-2px); }
-  .hero-trust{
-    display:flex; flex-wrap:wrap; gap:18px 22px; margin-top:25px;
-    color:#717c92; font-size:.78rem;
-  }
-  .hero-trust span{ display:inline-flex; align-items:center; gap:7px; }
-  .hero-trust i{ width:5px; height:5px; border-radius:50%; background:#4d7cff; box-shadow:0 0 10px rgba(77,124,255,.8); }
 
   .hero-stage{
-    position:relative; min-height:500px; display:flex; align-items:center; justify-content:center;
+    position:relative;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     isolation:isolate;
   }
+
   .stage-glow{
-    position:absolute; width:390px; height:390px; border-radius:50%;
-    background:radial-gradient(circle,rgba(46,107,255,.26),rgba(34,211,238,.08) 42%,transparent 70%);
-    filter:blur(8px); animation:stagePulse 6s ease-in-out infinite alternate;
+    position:absolute;
+    width:390px;
+    height:390px;
+    border-radius:50%;
+    background:radial-gradient(
+      circle,
+      rgba(46,107,255,.26),
+      rgba(34,211,238,.08) 42%,
+      transparent 70%
+    );
+    filter:blur(8px);
+    animation:stagePulse 6s ease-in-out infinite alternate;
   }
-  @keyframes stagePulse{ from{transform:scale(.94);opacity:.72} to{transform:scale(1.08);opacity:1} }
+
+  @keyframes stagePulse{
+    from{
+      transform:scale(.94);
+      opacity:.72;
+    }
+
+    to{
+      transform:scale(1.08);
+      opacity:1;
+    }
+  }
+
   .stage-grid{
-    position:absolute; inset:4% -8% 4% -8%; opacity:.45;
-    background-image:linear-gradient(rgba(98,140,255,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(98,140,255,.11) 1px,transparent 1px);
+    position:absolute;
+    inset:4% -8% 4% -8%;
+    opacity:.45;
+    background-image:
+      linear-gradient(rgba(98,140,255,.11) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(98,140,255,.11) 1px,transparent 1px);
     background-size:34px 34px;
-    mask-image:radial-gradient(circle at center,#000 15%,transparent 74%);
+    mask-image:radial-gradient(
+      circle at center,
+      #000 15%,
+      transparent 74%
+    );
     transform:perspective(500px) rotateX(58deg) translateY(80px);
   }
+
   .code-window{
-    position:relative; z-index:2; width:min(470px,100%);
-    border:1px solid rgba(255,255,255,.12); border-radius:22px;
-    background:linear-gradient(145deg,rgba(18,27,48,.92),rgba(7,12,23,.90));
-    box-shadow:0 30px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
-    overflow:hidden; backdrop-filter:blur(16px);
+    position:relative;
+    z-index:2;
+    width:min(470px,100%);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    background:linear-gradient(
+      145deg,
+      rgba(18,27,48,.92),
+      rgba(7,12,23,.90)
+    );
+    box-shadow:
+      0 30px 90px rgba(0,0,0,.45),
+      inset 0 1px 0 rgba(255,255,255,.05);
+    overflow:hidden;
+    backdrop-filter:blur(16px);
     transform:perspective(1100px) rotateY(-7deg) rotateX(3deg);
     animation:windowFloat 7s ease-in-out infinite;
   }
-  @keyframes windowFloat{ 0%,100%{transform:perspective(1100px) rotateY(-7deg) rotateX(3deg) translateY(0)} 50%{transform:perspective(1100px) rotateY(-5deg) rotateX(3deg) translateY(-9px)} }
+
+  @keyframes windowFloat{
+    0%,100%{
+      transform:
+        perspective(1100px)
+        rotateY(-7deg)
+        rotateX(3deg)
+        translateY(0);
+    }
+
+    50%{
+      transform:
+        perspective(1100px)
+        rotateY(-5deg)
+        rotateX(3deg)
+        translateY(-9px);
+    }
+  }
+
   .window-bar{
-    height:48px; padding:0 16px; display:flex; align-items:center; gap:12px;
-    border-bottom:1px solid rgba(255,255,255,.07); background:rgba(255,255,255,.025);
+    height:48px;
+    padding:0 16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
   }
-  .window-dots{display:flex;gap:6px}.window-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.22)}
-  .window-title{font:500 .72rem/1 'Space Grotesk';color:#7f8ba1;letter-spacing:.03em;flex:1}
-  .window-live{font:.65rem/1 'Space Grotesk';color:#6be6ad;text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:5px}
-  .window-live b{width:5px;height:5px;border-radius:50%;background:#6be6ad;box-shadow:0 0 9px #6be6ad}
-  .code-lines{padding:27px 24px 31px;font:500 .86rem/2 'Space Grotesk';color:#9aa7bd}
-  .code-lines>div{display:grid;grid-template-columns:30px 1fr;gap:14px}
-  .code-lines em{font-style:normal;color:#3f4a60;text-align:right;user-select:none}
-  .code-lines b{color:#67a0ff;font-weight:600}.code-lines strong{color:#66dfd2;font-weight:500}.code-lines i{color:#68e3aa;font-style:normal}
-  .code-gap{height:8px}
+
+  .window-dots{
+    display:flex;
+    gap:6px;
+  }
+
+  .window-dots i{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:rgba(255,255,255,.22);
+  }
+
+  .window-title{
+    font:500 .72rem/1 'Space Grotesk';
+    color:#7f8ba1;
+    letter-spacing:.03em;
+    flex:1;
+  }
+
+  .window-live{
+    font:.65rem/1 'Space Grotesk';
+    color:#6be6ad;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    display:flex;
+    align-items:center;
+    gap:5px;
+  }
+
+  .window-live b{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#6be6ad;
+    box-shadow:0 0 9px #6be6ad;
+  }
+
+  .code-lines{
+    padding:24px 26px 28px;
+    font:500 .78rem/2 'Space Grotesk',monospace;
+  }
+
+  .code-lines > div{
+    display:flex;
+    gap:18px;
+  }
+
+  .code-lines em{
+    width:18px;
+    color:#39435a;
+    font-style:normal;
+    user-select:none;
+  }
+
+  .code-lines span{
+    color:#aeb9cf;
+  }
+
+  .code-lines b{
+    color:#67a4ff;
+    font-weight:500;
+  }
+
+  .code-lines strong{
+    color:#6be6ad;
+    font-weight:500;
+  }
+
+  .code-lines i{
+    color:#6be6ad;
+    font-style:normal;
+  }
+
+  .code-gap{
+    height:9px;
+  }
+
   .float-card{
-    position:absolute; z-index:3; display:flex; align-items:center; gap:11px;
-    padding:13px 15px; border:1px solid rgba(255,255,255,.11); border-radius:15px;
-    background:rgba(12,18,32,.86); backdrop-filter:blur(14px);
-    box-shadow:0 18px 45px rgba(0,0,0,.34);
+    position:absolute;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:12px 15px;
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(11,17,30,.82);
+    backdrop-filter:blur(14px);
+    border-radius:15px;
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+    animation:floatCard 6s ease-in-out infinite;
   }
-  .float-card b{display:block;font:600 .78rem/1.2 'Space Grotesk'}.float-card small{display:block;color:#6f7b91;font-size:.67rem;margin-top:3px}
-  .float-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:rgba(46,107,255,.15);color:#65a0ff}
-  .flow-card{right:-4px;top:92px}.flow-card>strong{color:#67e2aa;font-size:.82rem}
-  .dashboard-card{left:-4px;bottom:92px}
-  .mini-chart{width:54px;height:32px;display:flex;align-items:end;gap:4px}
-  .mini-chart span{width:6px;border-radius:3px 3px 1px 1px;background:linear-gradient(to top,#2e6bff,#22d3ee)}
-  .mini-chart span:nth-child(1){height:35%}.mini-chart span:nth-child(2){height:52%}.mini-chart span:nth-child(3){height:42%}.mini-chart span:nth-child(4){height:72%}.mini-chart span:nth-child(5){height:62%}.mini-chart span:nth-child(6){height:90%}
 
-  section:nth-of-type(even)::before{
-    content:""; position:absolute; left:50%; top:0; width:min(1000px,90%); height:1px;
-    transform:translateX(-50%); background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);
+  .float-card b{
+    display:block;
+    font:600 .78rem 'Space Grotesk';
   }
-  .section-head h2{ letter-spacing:-.035em; }
-  .service-card,.case-card,.review-card,.form,.channel{
-    position:relative; overflow:hidden;
+
+  .float-card small{
+    display:block;
+    color:#7f8ba1;
+    font-size:.68rem;
+    margin-top:2px;
   }
-  .service-card::before,.case-card::before,.review-card::before,.form::before{
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:radial-gradient(circle at 0 0,rgba(46,107,255,.10),transparent 35%);
-    opacity:.65;
+
+  .float-icon{
+    width:30px;
+    height:30px;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(46,107,255,.12);
+    color:#75a7ff;
+    font-size:1rem;
   }
+
+  .float-card > strong{
+    color:#6be6ad;
+    font-size:.9rem;
+    margin-left:3px;
+  }
+
+  .flow-card{
+    right:-18px;
+    top:70px;
+  }
+
+  .dashboard-card{
+    left:-18px;
+    bottom:54px;
+    animation-delay:-2.5s;
+  }
+
+  .mini-chart{
+    width:58px;
+    height:34px;
+    display:flex;
+    align-items:flex-end;
+    gap:4px;
+  }
+
+  .mini-chart span{
+    width:6px;
+    border-radius:3px 3px 1px 1px;
+    background:linear-gradient(
+      to top,
+      #2e6bff,
+      #22d3ee
+    );
+  }
+
+  .mini-chart span:nth-child(1){height:35%}
+  .mini-chart span:nth-child(2){height:55%}
+  .mini-chart span:nth-child(3){height:43%}
+  .mini-chart span:nth-child(4){height:72%}
+  .mini-chart span:nth-child(5){height:61%}
+  .mini-chart span:nth-child(6){height:88%}
+
+  @keyframes floatCard{
+    0%,100%{
+      transform:translateY(0);
+    }
+
+    50%{
+      transform:translateY(-8px);
+    }
+  }
+
+  .hero-trust{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:24px;
+    color:#78849a;
+    font-size:.78rem;
+  }
+
+  .hero-trust span{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+  }
+
+  .hero-trust i{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#4d7cff;
+    box-shadow:0 0 10px rgba(77,124,255,.8);
+  }
+
+  .service-card{
+    position:relative;
+  }
+
   .service-card::after{
-    content:""; position:absolute; left:24px; right:24px; top:0; height:1px;
-    background:linear-gradient(90deg,transparent,rgba(80,150,255,.5),transparent);
-    opacity:0; transition:opacity .25s;
-  }
-  .service-card:hover::after{opacity:1}
-  .service-card:hover{ transform:translateY(-7px); box-shadow:0 18px 45px rgba(0,0,0,.22); }
-  .service-icon{ box-shadow:0 8px 22px rgba(46,107,255,.10); }
-  .process-item{ transition:transform .25s ease; }
-  .process-item:hover{ transform:translateX(5px); }
-  .channel{ background:rgba(255,255,255,.018); }
-  .form{ box-shadow:0 25px 70px rgba(0,0,0,.20); }
-  .field input,.field textarea{ background:rgba(5,9,17,.72); }
-  .field input:focus,.field textarea:focus{ box-shadow:0 0 0 3px rgba(34,211,238,.08); }
-  footer{ background:rgba(4,7,13,.35); }
-
-  @media (max-width: 980px){
-    .hero{ min-height:auto; padding-top:150px; }
-    .hero-inner{ grid-template-columns:1fr; gap:50px; }
-    .hero-stage{ min-height:440px; max-width:620px; width:100%; margin:0 auto; }
-    .flow-card{right:0}.dashboard-card{left:0}
-  }
-  @media (max-width: 640px){
-    .hero{ padding-top:130px; padding-bottom:90px; }
-    .hero h1{ font-size:clamp(2.35rem,11vw,3.2rem); }
-    .hero p.lead{ font-size:1rem; }
-    .hero-stage{ min-height:350px; }
-    .code-window{ border-radius:17px; transform:none; }
-    .flow-card{ right:-2px; top:28px; transform:scale(.88); transform-origin:right top; }
-    .dashboard-card{ left:-2px; bottom:30px; transform:scale(.88); transform-origin:left bottom; }
-    .stage-grid{ transform:perspective(450px) rotateX(58deg) translateY(65px); }
-    .hero-trust{ gap:11px 15px; }
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:1px;
+    background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(80,150,255,.5),
+      transparent
+    );
+    opacity:0;
+    transition:opacity .25s;
   }
 
+  .service-card:hover::after{
+    opacity:1;
+  }
+
+  .service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 45px rgba(0,0,0,.22);
+  }
+
+  .service-icon{
+    box-shadow:0 8px 22px rgba(46,107,255,.10);
+  }
+
+  .process-item{
+    transition:transform .25s ease;
+  }
+
+  .process-item:hover{
+    transform:translateX(5px);
+  }
+
+  .channel{
+    background:rgba(255,255,255,.018);
+  }
+
+  @media (max-width:980px){
+    .hero{
+      min-height:auto;
+      padding-top:150px;
+    }
+
+    .hero-inner{
+      grid-template-columns:1fr;
+      gap:50px;
+    }
+
+    .hero-stage{
+      min-height:440px;
+      max-width:620px;
+      width:100%;
+      margin:0 auto;
+    }
+
+    .flow-card{
+      right:0;
+    }
+
+    .dashboard-card{
+      left:0;
+    }
+  }
+
+  @media (max-width:640px){
+    .hero{
+      padding-top:130px;
+      padding-bottom:90px;
+    }
+
+    .hero h1{
+      font-size:clamp(2.35rem,11vw,3.2rem);
+    }
+
+    .hero p.lead{
+      font-size:1rem;
+    }
+
+    .hero-stage{
+      min-height:350px;
+    }
+
+    .code-window{
+      border-radius:17px;
+      transform:none;
+    }
+
+    .flow-card{
+      right:-2px;
+      top:28px;
+      transform:scale(.88);
+      transform-origin:right top;
+    }
+
+    .dashboard-card{
+      left:-2px;
+      bottom:30px;
+      transform:scale(.88);
+      transform-origin:left bottom;
+    }
+
+    .stage-grid{
+      transform:perspective(450px) rotateX(58deg) translateY(65px);
+    }
+
+    .hero-trust{
+      gap:11px 15px;
+    }
+  }
 </style>
 </head>
+
 <body>
 
 <canvas id="codeBg" aria-hidden="true"></canvas>
 
 <header class="nav" id="siteNav">
   <div class="nav-inner">
+
     <div class="logo">
       <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="lgGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#2E6BFF"/>
-            <stop offset="1" stop-color="#22D3EE"/>
+            <stop offset="0%" stop-color="#2E6BFF"/>
+            <stop offset="100%" stop-color="#22D3EE"/>
           </linearGradient>
         </defs>
-        <path d="M15 20 L15 80 L38 80 L38 45 L62 80 L85 80 L85 20 L62 20 L62 55 L38 20 Z" fill="url(#lgGrad)"/>
+        <path
+          d="M15 20 L15 80 L38 80 L38 45 L62 80 L85 80 L85 20 L62 20 L62 55 L38 20 Z"
+          fill="url(#lgGrad)"
+        />
       </svg>
       <span>NewYaka</span>
     </div>
+
     <nav class="nav-links">
       <a data-target="hakkimizda">Hakkımızda</a>
       <a data-target="hizmetler">Hizmetler</a>
       <a data-target="surec">Süreç</a>
-      <a data-target="senaryolar">Örnekler</a>
       <a data-target="iletisim">İletişim</a>
     </nav>
-    <a href="https://wa.me/905304518506" target="_blank" rel="noopener" class="nav-cta">Ücretsiz Danışmanlık</a>
-    <button class="nav-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false">
-      <span></span><span></span><span></span>
+
+    <a
+      href="https://wa.me/905304518506"
+      target="_blank"
+      rel="noopener"
+      class="nav-cta"
+    >
+      İletişime Geç
+    </a>
+
+    <button
+      class="nav-toggle"
+      id="menuToggle"
+      aria-label="Menüyü aç"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
+
   </div>
 
   <div class="menu-panel" id="menuPanel">
     <div class="menu-panel-inner">
+
       <div class="menu-group">
-        <span class="menu-label">Menü</span>
-        <a data-target="hizmetler">Hizmetler</a>
+        <div class="menu-label">MENÜ</div>
         <a data-target="hakkimizda">Hakkımızda</a>
-        <a data-target="surec">Süreç</a>
-        <a data-target="senaryolar">Örnekler</a>
+        <a data-target="hizmetler">Hizmetler</a>
+        <a data-target="surec">Nasıl Çalışıyoruz?</a>
+        <a data-target="senaryolar">Örnek Senaryolar</a>
         <a data-target="iletisim">İletişim</a>
       </div>
+
       <div class="menu-group">
-        <span class="menu-label">İletişim</span>
-        <a href="https://wa.me/905304518506" target="_blank" rel="noopener" class="menu-contact">
-          <span class="mc-icn wa"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg></span>
-          <span><strong>WhatsApp</strong><em>0530 451 85 06</em></span>
+        <div class="menu-label">İLETİŞİM</div>
+
+        <a
+          class="menu-contact"
+          href="https://wa.me/905304518506"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="mc-icn wa">
+            <svg viewBox="0 0 24 24" fill="#25D366">
+              <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/>
+            </svg>
+          </span>
+          <span>
+            <strong>WhatsApp</strong>
+            <em>0530 451 85 06</em>
+          </span>
         </a>
-        <a href="https://www.instagram.com/newyaka0/" target="_blank" rel="noopener" class="menu-contact">
-          <span class="mc-icn ig"><svg viewBox="0 0 24 24" fill="none" stroke="#E4405F" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></span>
-          <span><strong>Instagram</strong><em>@newyaka0</em></span>
+
+        <a
+          class="menu-contact"
+          href="https://www.instagram.com/newyaka0/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="mc-icn ig">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#E4405F"
+              stroke-width="1.7"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="1"/>
+            </svg>
+          </span>
+
+          <span>
+            <strong>Instagram</strong>
+            <em>@newyaka0</em>
+          </span>
         </a>
-        <a href="mailto:newyakatr@gmail.com" class="menu-contact">
-          <span class="mc-icn mail"><svg viewBox="0 0 24 24" fill="none" stroke="#5B9CFF" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-          <span><strong>E-posta</strong><em>newyakatr@gmail.com</em></span>
+
+        <a
+          class="menu-contact"
+          href="mailto:newyakatr@gmail.com"
+        >
+          <span class="mc-icn mail">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5B9CFF"
+              stroke-width="1.7"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </span>
+
+          <span>
+            <strong>E-posta</strong>
+            <em>newyakatr@gmail.com</em>
+          </span>
         </a>
+
       </div>
     </div>
   </div>
 </header>
 
+<main>
+
 <section class="hero">
   <div class="hero-glow"></div>
+
   <div class="wrap hero-inner">
+
     <div class="hero-copy">
-      <div class="hero-eyebrow"><span class="dot"></span> Yazılım geliştirme &amp; otomasyon</div>
-      <h1>İşinizi kolaylaştıran <span>özel yazılım ve otomasyon</span> çözümleri</h1>
-      <p class="lead">Web sitesi, mobil uygulama, e-ticaret, Excel ve iş süreçleri otomasyonlarını ihtiyacınıza göre tasarlıyor; çalışan, anlaşılır ve geliştirilebilir çözümler üretiyoruz.</p>
-      <div class="hero-kicker" aria-label="Çözüm alanları">
-        <a href="#web-mobil">Web &amp; Mobil</a>
-        <a href="#is-otomasyonu">İş Otomasyonu</a>
-        <a href="#e-ticaret">E-Ticaret</a>
-        <a href="#bot-entegrasyon">Bot &amp; Entegrasyon</a>
+
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Özel yazılım & otomasyon çözümleri
       </div>
+
+      <h1>
+        İşinizi kolaylaştıran yazılımlar,
+        sizin için tasarlanır.
+      </h1>
+
+      <p class="lead">
+        Web sitesi, mobil uygulama, otomasyon ve işletmenize özel
+        yazılım çözümleri geliştiriyoruz.
+      </p>
+
       <div class="hero-ctas">
-        <a href="https://wa.me/905304518506" target="_blank" rel="noopener" class="btn btn-primary">Ücretsiz Danışmanlık Al <span class="btn-arrow">↗</span></a>
-        <a data-target="hizmetler" class="btn btn-ghost">Hizmetleri İncele <span class="btn-arrow">↓</span></a>
+        <a
+          href="https://wa.me/905304518506"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Ücretsiz Danışmanlık Al
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <a
+          data-target="hizmetler"
+          class="btn btn-ghost"
+        >
+          Hizmetleri İncele
+          <span class="btn-arrow">↓</span>
+        </a>
       </div>
+
       <div class="hero-trust">
-        <span><i></i> Özel geliştirme</span>
-        <span><i></i> Mobil uyumlu</span>
-        <span><i></i> Teslim sonrası destek</span>
+        <span>
+          <i></i>
+          Özel geliştirme
+        </span>
+
+        <span>
+          <i></i>
+          Mobil uyumlu
+        </span>
+
+        <span>
+          <i></i>
+          Teslim sonrası destek
+        </span>
       </div>
+
     </div>
 
-    <div class="hero-stage" aria-label="Yazılım ve otomasyon görseli">
+    <div
+      class="hero-stage"
+      aria-label="Yazılım ve otomasyon görseli"
+    >
+
       <div class="stage-glow"></div>
       <div class="stage-grid"></div>
+
       <div class="code-window">
+
         <div class="window-bar">
-          <span class="window-dots"><i></i><i></i><i></i></span>
-          <span class="window-title">newyaka / automation</span>
-          <span class="window-live"><b></b> live</span>
+
+          <span class="window-dots">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+
+          <span class="window-title">
+            newyaka / automation
+          </span>
+
+          <span class="window-live">
+            <b></b>
+            live
+          </span>
+
         </div>
+
         <div class="code-lines">
-          <div><em>01</em><span><b>const</b> project = {</span></div>
-          <div><em>02</em><span>&nbsp;&nbsp;type: <strong>"custom"</strong>,</span></div>
-          <div><em>03</em><span>&nbsp;&nbsp;workflow: <strong>"automated"</strong>,</span></div>
-          <div><em>04</em><span>&nbsp;&nbsp;status: <strong>"ready"</strong></span></div>
-          <div><em>05</em><span>};</span></div>
+
+          <div>
+            <em>01</em>
+            <span>
+              <b>const</b> project = {
+            </span>
+          </div>
+
+          <div>
+            <em>02</em>
+            <span>
+              &nbsp;&nbsp;type: <strong>"custom"</strong>,
+            </span>
+          </div>
+
+          <div>
+            <em>03</em>
+            <span>
+              &nbsp;&nbsp;workflow: <strong>"automated"</strong>,
+            </span>
+          </div>
+
+          <div>
+            <em>04</em>
+            <span>
+              &nbsp;&nbsp;status: <strong>"ready"</strong>
+            </span>
+          </div>
+
+          <div>
+            <em>05</em>
+            <span>};</span>
+          </div>
+
           <div class="code-gap"></div>
-          <div><em>06</em><span><b>deploy</b>(project); <i>✓</i></span></div>
+
+          <div>
+            <em>06</em>
+            <span>
+              <b>deploy</b>(project); <i>✓</i>
+            </span>
+          </div>
+
         </div>
       </div>
 
       <div class="float-card flow-card">
         <span class="float-icon">↗</span>
-        <div><b>Otomasyon</b><small>İş akışı hazır</small></div>
+
+        <div>
+          <b>Otomasyon</b>
+          <small>İş akışı hazır</small>
+        </div>
+
         <strong>✓</strong>
       </div>
 
       <div class="float-card dashboard-card">
-        <div class="mini-chart"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        <div><b>Kontrol paneli</b><small>Tek ekranda yönetim</small></div>
+
+        <div class="mini-chart">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div>
+          <b>Kontrol paneli</b>
+          <small>Tek ekranda yönetim</small>
+        </div>
+
       </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="hakkimizda">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div class="section-tag">Hakkımızda</div>
+
+      <h2>
+        İhtiyacınıza göre geliştirilen,
+        gereksiz karmaşadan uzak çözümler.
+      </h2>
+
+      <p>
+        Hazır kalıplar yerine işinize gerçekten fayda sağlayacak
+        yazılımlar ve otomasyonlar geliştiriyoruz.
+      </p>
+    </div>
+
+    <div class="about">
+
+      <div class="about-copy reveal">
+
+        <p>
+          NewYaka olarak işletmelerin dijital süreçlerini
+          daha düzenli, hızlı ve kolay yönetebilmesi için
+          özel yazılım çözümleri geliştiriyoruz.
+        </p>
+
+        <p>
+          İster yeni bir web sitesi, ister işletmenize özel
+          küçük bir uygulama, ister tekrar eden işleri
+          otomatikleştiren bir sistem olsun; ihtiyacı
+          anlayıp ona göre çözüm üretiyoruz.
+        </p>
+
+        <p>
+          Projenin yalnızca geliştirme aşamasında değil,
+          teslim sonrasında da destek sunuyoruz.
+        </p>
+
+      </div>
+
+      <div class="why-list reveal">
+
+        <div class="why-item">
+          <div class="why-num">01</div>
+
+          <div>
+            <h4>İhtiyaca özel</h4>
+            <p>
+              İşletmenizin çalışma şekline uygun çözümler
+              tasarlanır.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-num">02</div>
+
+          <div>
+            <h4>Sade ve kullanışlı</h4>
+            <p>
+              Karmaşık sistemler yerine kolay anlaşılır
+              arayüzler ve süreçler.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-num">03</div>
+
+          <div>
+            <h4>Geliştirilebilir</h4>
+            <p>
+              İhtiyaç büyüdükçe sistem de geliştirilebilir.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="hizmetler">
+
   <div class="wrap">
+
     <div class="section-head reveal">
       <div class="section-tag">Hizmetler</div>
-      <h2>İhtiyacınıza göre şekillenen yazılım hizmetleri</h2>
-      <p>Küçük bir otomasyondan uçtan uca bir platforma kadar, aşağıdaki alanların her birinde projeler üretiyor ve geliştiriyoruz.</p>
-    </div>
-    <div class="services-grid">
-      <div id="web-mobil" class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 21h8"/></svg></div>
-        <h3>Kurumsal Web Siteleri</h3>
-        <p>İşletmelerin kendi kontrol panelinden içerik, ürün ve fiyat güncelleyebildiği yönetilebilir web siteleri.</p>
-      </div>
-      <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-        <h3>Mobil Uygulama Geliştirme</h3>
-        <p>İşletmelere veya bireysel kullanıcılara özel iOS ve Android mobil uygulamalar.</p>
-      </div>
-      <div id="is-otomasyonu" class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h3>Özel Excel / Tablo Otomasyonları</h3>
-        <p>Tekrarlayan işleri otomatikleştiren gelişmiş Excel tabloları, makrolar ve raporlama araçları.</p>
-      </div>
-      <div id="e-ticaret" class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h3>E-Ticaret Çözümleri</h3>
-        <p>E-ticaret operasyonlarını kolaylaştıran özel yazılımlar: stok takibi, sipariş yönetimi, entegrasyonlar.</p>
-      </div>
-      <div id="bot-entegrasyon" class="service-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.5 8.6 8.6 0 0 1-4-1L3 20l1.1-5A8.4 8.4 0 0 1 21 11.5Z"/></svg></div>
-        <h3>WhatsApp / Instagram Otomasyon Botları</h3>
-        <p>Müşterileri karşılayan, yönlendiren, randevu oluşturan ve sık sorulan soruları yanıtlayan botlar.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 12h10M4 16h10M4 20h10"/><path d="M18 12v8M14 16h8"/></svg></div>
-        <h3>Muhasebe Süreç Otomasyonları</h3>
-        <p>Fatura, gider takibi ve raporlama gibi işleri kolaylaştıran özel yazılımlar.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
-        <h3>Bireysel Kullanıcılar İçin Uygulamalar</h3>
-        <p>Günlük hayatı kolaylaştıran, kişiye özel ihtiyaçlara göre tasarlanmış küçük ölçekli uygulamalar.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="hakkimizda">
-  <div class="wrap about">
-    <div class="about-copy reveal">
-      <p>NewYaka, işletmelerin dijitalde daha düzenli, hızlı ve verimli çalışmasına yardımcı olan özel yazılım ve otomasyon çözümleri geliştirir.</p>
-      <p>Hazır bir şablonu size uydurmak yerine, ihtiyacınızı anlayıp uygulanabilir bir çözümü birlikte şekillendiriyoruz. Geliştirme, teslimat ve sonrasındaki destek sürecinde iletişimi açık tutuyoruz.</p>
-      <div class="solution-note"><strong>Yaklaşımımız</strong><span>Önce problemi netleştirir, sonra gereksiz özelliklerle şişirmeden doğru çözümü geliştiririz.</span></div>
+      <h2>
+        İhtiyacınıza göre şekillenen
+        yazılım hizmetleri
+      </h2>
+
+      <p>
+        Küçük bir otomasyondan uçtan uca bir platforma kadar,
+        işletmenizin ihtiyacına göre projeler geliştiriyoruz.
+      </p>
     </div>
-    <div class="why-list reveal">
-      <div class="why-item">
-        <span class="why-num">01</span>
-        <div><h4>Hıza değer verilir</h4><p>Gereksiz katmanlar olmadan, doğrudan çalışan ve test edilebilir bir ürüne odaklanılır.</p></div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 8h18"/>
+            <path d="M7 12h4M7 16h7"/>
+          </svg>
+        </div>
+
+        <h3>Kurumsal Web Siteleri</h3>
+
+        <p>
+          Modern, hızlı, mobil uyumlu ve işletmenizi
+          profesyonel şekilde temsil eden web siteleri.
+        </p>
       </div>
-      <div class="why-item">
-        <span class="why-num">02</span>
-        <div><h4>Her proje kendine özel</h4><p>Şablon üzerinden değil, ihtiyacınızın gerçek yapısına göre kurgulanmış çözümler geliştirilir.</p></div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="6" y="2.5" width="12" height="19" rx="2"/>
+            <path d="M10 18h4"/>
+          </svg>
+        </div>
+
+        <h3>Mobil Uygulamalar</h3>
+
+        <p>
+          İşletmenizin veya projenizin ihtiyacına göre
+          mobil uygulamalar.
+        </p>
       </div>
-      <div class="why-item">
-        <span class="why-num">03</span>
-        <div><h4>Teslim sonrası destek</h4><p>Proje tesliminden sonra da sorular, küçük iyileştirmeler ve sonraki geliştirmeler için iletişim devam eder.</p></div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 9h18"/>
+            <path d="M8 13h2M12 13h2M16 13h2"/>
+            <path d="M8 16h2M12 16h2"/>
+          </svg>
+        </div>
+
+        <h3>Excel & Tablo Otomasyonları</h3>
+
+        <p>
+          Tekrarlayan Excel işlerini azaltan, hesaplamaları
+          ve raporlamaları kolaylaştıran sistemler.
+        </p>
       </div>
-      <div class="why-item">
-        <span class="why-num">04</span>
-        <div><h4>Şeffaf ve anlaşılır maliyet</h4><p>Kapsam netleştikten sonra sürpriz maliyet çıkarmadan, konuşulan çerçevede ilerlenilir.</p></div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 5h16v14H4z"/>
+            <path d="M8 9h8M8 13h5M8 17h7"/>
+          </svg>
+        </div>
+
+        <h3>E-Ticaret Çözümleri</h3>
+
+        <p>
+          Ürün, sipariş, stok ve satış süreçlerini
+          kolaylaştıran e-ticaret sistemleri.
+        </p>
       </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z"/>
+            <path d="M8 10h8M8 14h5"/>
+          </svg>
+        </div>
+
+        <h3>WhatsApp & Instagram Botları</h3>
+
+        <p>
+          Müşteriyi karşılayan, bilgi veren, yönlendiren
+          veya talepleri toplayan mesajlaşma otomasyonları.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z"/>
+            <path d="M7 14l3-3 2 2 4-5 2 2"/>
+          </svg>
+        </div>
+
+        <h3>Özel Yazılım & Küçük Uygulamalar</h3>
+
+        <p>
+          İşletmenizin belirli bir problemini çözmek için
+          geliştirilen özel uygulamalar ve araçlar.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="surec">
+
   <div class="wrap">
+
     <div class="section-head reveal">
       <div class="section-tag">Süreç</div>
-      <h2>Nasıl çalışıyoruz</h2>
-      <p>Baştan sona net ve takip edilebilir bir süreç izliyoruz.</p>
+
+      <h2>
+        Fikirden çalışan çözüme
+      </h2>
+
+      <p>
+        Projeyi birlikte netleştiriyor,
+        geliştirme sürecini anlaşılır şekilde ilerletiyoruz.
+      </p>
     </div>
-    <div class="process reveal">
-      <div class="process-row">
-        <span class="process-num">01</span>
-        <div><h4>İhtiyaç Analizi</h4><p>Ücretsiz bir görüşmeyle ihtiyacınızı ve hedeflerinizi birlikte netleştiririz.</p></div>
+
+    <div class="process-list">
+
+      <div class="process-item reveal">
+        <div class="process-num">01</div>
+
+        <h3>İhtiyacı Anlıyoruz</h3>
+
+        <p>
+          Ne yapmak istediğinizi ve mevcut sürecinizi
+          birlikte değerlendiriyoruz.
+        </p>
       </div>
-      <div class="process-row">
-        <span class="process-num">02</span>
-        <div><h4>Teklif ve Planlama</h4><p>Kapsam, zaman çizelgesi ve maliyet netleştirilir; her iki tarafça onaylanır.</p></div>
+
+      <div class="process-item reveal">
+        <div class="process-num">02</div>
+
+        <h3>Çözümü Planlıyoruz</h3>
+
+        <p>
+          Gereksiz özelliklerden uzak, ihtiyaca uygun
+          bir yapı oluşturuyoruz.
+        </p>
       </div>
-      <div class="process-row">
-        <span class="process-num">03</span>
-        <div><h4>Geliştirme</h4><p>Düzenli güncellemelerle şeffaf bir şekilde geliştirme sürdürülür.</p></div>
+
+      <div class="process-item reveal">
+        <div class="process-num">03</div>
+
+        <h3>Geliştiriyoruz</h3>
+
+        <p>
+          Tasarım, yazılım ve gerekli entegrasyonları
+          hayata geçiriyoruz.
+        </p>
       </div>
-      <div class="process-row">
-        <span class="process-num">04</span>
-        <div><h4>Teslim ve Destek</h4><p>Ürün teslim edilir; sonrasında destek ve iyileştirmeler devam eder.</p></div>
+
+      <div class="process-item reveal">
+        <div class="process-num">04</div>
+
+        <h3>Teslim & Destek</h3>
+
+        <p>
+          Projeyi teslim ediyor ve ihtiyaç halinde
+          geliştirmeye devam ediyoruz.
+        </p>
       </div>
+
     </div>
+
   </div>
 </section>
 
 <section id="senaryolar">
+
   <div class="wrap">
+
     <div class="section-head reveal">
       <div class="section-tag">Örnek Senaryolar</div>
-      <h2>Bu çözümler pratikte nasıl görünür</h2>
-      <p>Aşağıdakiler, hizmetlerin ne tür ihtiyaçlara karşılık gelebileceğini gösteren varsayımsal örneklerdir.</p>
+
+      <h2>
+        Tekrarlayan işleri yazılıma bırakın
+      </h2>
+
+      <p>
+        İşletmelerde sık karşılaşılan bazı süreçler
+        yazılım ve otomasyon ile daha kolay yönetilebilir.
+      </p>
     </div>
-    <div class="cases-grid">
-      <div class="case-card reveal">
-        <div class="case-label">E-ticaret</div>
-        <p>Bir e-ticaret firması için farklı satış kanalları arasında stok senkronizasyonu sağlayan bir panel.</p>
-      </div>
-      <div class="case-card reveal">
-        <div class="case-label">Hizmet sektörü</div>
-        <p>Bir restoran için WhatsApp üzerinden otomatik rezervasyon alan bir bot.</p>
-      </div>
-      <div class="case-card reveal">
-        <div class="case-label">Muhasebe</div>
-        <p>Bir muhasebe ofisi için fatura verilerini otomatik raporlayan bir tablo sistemi.</p>
-      </div>
-    </div>
-    <div class="reviews-head reveal">
-      <h3>Neler geliştirebiliriz?</h3>
-      <p>Aşağıdaki örnekler referans gösterimi değil; birlikte çözebileceğimiz ihtiyaç tiplerini anlatan senaryolardır.</p>
-    </div>
-    <div class="reviews-grid">
+
+    <div class="scenario-grid">
+
       <div class="review-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 21h8M12 16v5"/></svg></div>
-        <p><strong>Yönetilebilir web sitesi</strong><br><span style="color:var(--text-dim)">İçerik, ürün veya hizmetlerinizi kolayca güncelleyebileceğiniz modern bir site.</span></p>
+
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 5h16v14H4z"/>
+            <path d="M7 9h10M7 13h7M7 17h5"/>
+          </svg>
+        </div>
+
+        <p>
+          <strong>Excel raporlama otomasyonu</strong><br>
+          <span style="color:var(--text-dim)">
+            Farklı Excel dosyalarındaki bilgileri
+            tek bir raporda birleştiren sistemler.
+          </span>
+        </p>
+
       </div>
+
       <div class="review-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
-        <p><strong>İş takip / raporlama paneli</strong><br><span style="color:var(--text-dim)">Dağınık Excel ve manuel takip işlerini tek bir ekranda düzenleyen özel araçlar.</span></p>
+
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z"/>
+            <path d="M8 10h8M8 14h5"/>
+          </svg>
+        </div>
+
+        <p>
+          <strong>Mesajlaşma otomasyonu</strong><br>
+          <span style="color:var(--text-dim)">
+            Müşteriyi karşılayan, bilgi veren,
+            yönlendiren veya rezervasyon talebi
+            toplayan botlar.
+          </span>
+        </p>
+
       </div>
+
       <div class="review-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg></div>
-        <p><strong>Mesajlaşma otomasyonu</strong><br><span style="color:var(--text-dim)">Müşteriyi karşılayan, bilgi veren, yönlendiren veya rezervasyon talebi toplayan botlar.</span></p>
+
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z"/>
+            <path d="M7 14l3-3 2 2 4-5 2 2"/>
+          </svg>
+        </div>
+
+        <p>
+          <strong>E-ticaret operasyon aracı</strong><br>
+          <span style="color:var(--text-dim)">
+            Stok, sipariş, ürün veya farklı satış
+            kanallarını daha düzenli yönetmeye yardımcı sistemler.
+          </span>
+        </p>
+
       </div>
-      <div class="review-card reveal">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M7 14l3-3 2 2 4-5 2 2"/></svg></div>
-        <p><strong>E-ticaret operasyon aracı</strong><br><span style="color:var(--text-dim)">Stok, sipariş, ürün veya farklı satış kanallarını daha düzenli yönetmeye yardımcı sistemler.</span></p>
-      </div>
+
     </div>
   </div>
 </section>
-
 
 <section id="iletisim">
+
   <div class="wrap contact">
+
     <div class="contact-info reveal">
+
       <div class="section-tag">İletişim</div>
-      <h2 style="font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin-bottom:16px;">Projenizi konuşalım</h2>
-      <p>Ne yapmak istediğinizi birkaç cümleyle anlatmanız yeterli. İhtiyacı birlikte netleştirip uygun çözümü konuşabiliriz.</p>
+
+      <h2 style="font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin-bottom:16px;">
+        Projenizi konuşalım
+      </h2>
+
+      <p>
+        Ne yapmak istediğinizi birkaç cümleyle anlatmanız yeterli.
+        İhtiyacı birlikte netleştirip uygun çözümü konuşabiliriz.
+      </p>
+
       <div class="contact-channels">
-        <a class="channel" href="https://wa.me/905304518506" target="_blank" rel="noopener">
-          <span class="icn wa"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg></span>
-          <div><div class="ch-title">WhatsApp</div><div class="ch-sub">0530 451 85 06</div></div>
+
+        <a
+          class="channel"
+          href="https://wa.me/905304518506"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="icn wa">
+            <svg viewBox="0 0 24 24" fill="#25D366">
+              <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/>
+            </svg>
+          </span>
+
+          <div>
+            <div class="ch-title">WhatsApp</div>
+            <div class="ch-sub">0530 451 85 06</div>
+          </div>
         </a>
-        <a class="channel" href="https://www.instagram.com/newyaka0/" target="_blank" rel="noopener">
-          <span class="icn ig"><svg viewBox="0 0 24 24" fill="none" stroke="#E4405F" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></span>
-          <div><div class="ch-title">Instagram</div><div class="ch-sub">@newyaka0</div></div>
+
+        <a
+          class="channel"
+          href="https://www.instagram.com/newyaka0/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="icn ig">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#E4405F"
+              stroke-width="1.7"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="1"/>
+            </svg>
+          </span>
+
+          <div>
+            <div class="ch-title">Instagram</div>
+            <div class="ch-sub">@newyaka0</div>
+          </div>
         </a>
-        <a class="channel" href="mailto:newyakatr@gmail.com">
-          <span class="icn mail"><svg viewBox="0 0 24 24" fill="none" stroke="#5B9CFF" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-          <div><div class="ch-title">E-posta</div><div class="ch-sub">newyakatr@gmail.com</div></div>
+
+        <a
+          class="channel"
+          href="mailto:newyakatr@gmail.com"
+        >
+          <span class="icn mail">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5B9CFF"
+              stroke-width="1.7"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </span>
+
+          <div>
+            <div class="ch-title">E-posta</div>
+            <div class="ch-sub">newyakatr@gmail.com</div>
+          </div>
         </a>
+
       </div>
     </div>
 
-    <form class="form reveal" id="contactForm" action="https://formspree.io/f/mgaedzjg" method="POST">
+    <form
+      class="form reveal"
+      id="contactForm"
+      action="https://formspree.io/f/mgaedzjg"
+      method="POST"
+    >
+
       <div class="form-row">
-        <div class="field"><label for="name">Ad Soyad</label><input id="name" name="name" type="text" placeholder="Adınız Soyadınız" autocomplete="name" required></div>
-        <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" placeholder="05xx xxx xx xx" autocomplete="tel"></div>
+
+        <div class="field">
+          <label for="name">Ad Soyad</label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Adınız Soyadınız"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefon</label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="05xx xxx xx xx"
+            autocomplete="tel"
+          >
+        </div>
+
       </div>
-      <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" placeholder="ornek@eposta.com" autocomplete="email" required></div>
-      <div class="field"><label for="message">Mesaj</label><textarea id="message" name="message" placeholder="Projenizden kısaca bahsedin..." required></textarea></div>
-      <button type="submit" class="btn btn-primary">Mesaj Gönder</button>
-      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-      
+
+      <div class="field">
+
+        <label for="email">E-posta</label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="ornek@eposta.com"
+          autocomplete="email"
+          required
+        >
+
+      </div>
+
+      <div class="field">
+
+        <label for="message">Mesaj</label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Projenizden kısaca bahsedin..."
+          required
+        ></textarea>
+
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+      >
+        Mesaj Gönder
+      </button>
+
+      <div
+        class="form-status"
+        id="formStatus"
+        role="status"
+        aria-live="polite"
+      ></div>
+
     </form>
+
   </div>
 </section>
 
+</main>
+
 <footer>
+
   <div class="wrap footer-inner">
+
     <div class="logo">
-      <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 20 L15 80 L38 80 L38 45 L62 80 L85 80 L85 20 L62 20 L62 55 L38 20 Z" fill="url(#lgGrad)"/>
+
+      <svg
+        class="logo-mark"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <defs>
+          <linearGradient id="lgGradFooter" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2E6BFF"/>
+            <stop offset="100%" stop-color="#22D3EE"/>
+          </linearGradient>
+        </defs>
+
+        <path
+          d="M15 20 L15 80 L38 80 L38 45 L62 80 L85 80 L85 20 L62 20 L62 55 L38 20 Z"
+          fill="url(#lgGradFooter)"
+        />
+
       </svg>
+
       <span>NewYaka</span>
+
     </div>
+
     <div class="footer-links">
       <a data-target="hakkimizda">Hakkımızda</a>
       <a data-target="hizmetler">Hizmetler</a>
       <a data-target="surec">Süreç</a>
       <a data-target="iletisim">İletişim</a>
     </div>
-    <div class="footer-copy">© 2026 NewYaka. Özel yazılım &amp; otomasyon çözümleri.</div>
+
+    <div class="footer-copy">
+      © 2026 NewYaka. Özel yazılım &amp; otomasyon çözümleri.
+    </div>
+
   </div>
+
 </footer>
 
 <script>
+
   const navEl = document.getElementById('siteNav');
+
   window.addEventListener('scroll', () => {
-    navEl.classList.toggle('scrolled', window.scrollY > 10);
+    navEl.classList.toggle(
+      'scrolled',
+      window.scrollY > 10
+    );
   });
 
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
+  const revealEls =
+    document.querySelectorAll('.reveal');
 
-  const menuToggle = document.getElementById('menuToggle');
-  const menuPanel = document.getElementById('menuPanel');
-  function closeMenu(){
-    menuToggle.classList.remove('open');
-    menuPanel.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded','false');
-  }
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.classList.toggle('open');
-    menuPanel.classList.toggle('open', isOpen);
-    menuToggle.setAttribute('aria-expanded', isOpen);
-  });
-  menuPanel.querySelectorAll('[data-target]').forEach(a => a.addEventListener('click', closeMenu));
+  const io = new IntersectionObserver(
+    (entries) => {
 
-  // Dinamik site içi yönlendirme — hiçbir dış yönlendirme veya URL değişikliği yok
-  const HEADER_OFFSET = 80;
-  document.querySelectorAll('[data-target]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.getElementById(link.getAttribute('data-target'));
-      if (!target) return;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
-      window.scrollTo({ top, behavior: 'smooth' });
-      if (menuPanel.classList.contains('open')) closeMenu();
-    });
-  });
+      entries.forEach(e => {
 
+        if(e.isIntersecting){
 
-  // ---------- İletişim formu: WhatsApp mesajı oluştur ----------
-  const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
+          e.target.classList.add('in');
 
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+          io.unobserve(e.target);
 
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton ? submitButton.textContent : '';
+        }
 
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = 'Gönderiliyor…';
-    }
-
-    formStatus.textContent = 'Mesajınız gönderiliyor…';
-    formStatus.className = '';
-
-    try {
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' }
       });
 
-      if (response.ok) {
-        formStatus.textContent = '✓ Mesajınız başarıyla gönderildi. En kısa sürede dönüş yapacağız.';
-        formStatus.className = 'success';
-        contactForm.reset();
-      } else {
-        const data = await response.json().catch(() => ({}));
-        formStatus.textContent =
-          data.errors?.map(err => err.message).join(', ') ||
-          'Mesaj gönderilemedi. Lütfen tekrar deneyin.';
-        formStatus.className = 'error';
-      }
-    } catch (error) {
-      formStatus.textContent = 'Bağlantı sırasında bir sorun oluştu. Lütfen tekrar deneyin.';
-      formStatus.className = 'error';
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-      }
+    },
+    {
+      threshold: 0.15
     }
-  });
-}
+  );
 
-  // ---------- Premium arka plan kod akışı ----------
+  revealEls.forEach(el => io.observe(el));
+
+  const menuToggle =
+    document.getElementById('menuToggle');
+
+  const menuPanel =
+    document.getElementById('menuPanel');
+
+  function closeMenu(){
+
+    menuToggle.classList.remove('open');
+
+    menuPanel.classList.remove('open');
+
+    menuToggle.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+  }
+
+  menuToggle.addEventListener('click', () => {
+
+    const isOpen =
+      menuToggle.classList.toggle('open');
+
+    menuPanel.classList.toggle(
+      'open',
+      isOpen
+    );
+
+    menuToggle.setAttribute(
+      'aria-expanded',
+      isOpen
+    );
+
+  });
+
+  menuPanel
+    .querySelectorAll('[data-target]')
+    .forEach(a =>
+      a.addEventListener('click', closeMenu)
+    );
+
+  const HEADER_OFFSET = 80;
+
+  document
+    .querySelectorAll('[data-target]')
+    .forEach(link => {
+
+      link.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        const target =
+          document.getElementById(
+            link.getAttribute('data-target')
+          );
+
+        if (!target) return;
+
+        const top =
+          target.getBoundingClientRect().top +
+          window.pageYOffset -
+          HEADER_OFFSET;
+
+        window.scrollTo({
+          top,
+          behavior: 'smooth'
+        });
+
+        if (
+          menuPanel.classList.contains('open')
+        ){
+          closeMenu();
+        }
+
+      });
+
+    });
+
+
+  /* ---------- İletişim formu ---------- */
+
+  const contactForm =
+    document.getElementById('contactForm');
+
+  const formStatus =
+    document.getElementById('formStatus');
+
+  if (contactForm) {
+
+    contactForm.addEventListener(
+      'submit',
+      async (e) => {
+
+        e.preventDefault();
+
+        const submitButton =
+          contactForm.querySelector(
+            'button[type="submit"]'
+          );
+
+        const originalButtonText =
+          submitButton
+            ? submitButton.textContent
+            : '';
+
+        if (submitButton) {
+
+          submitButton.disabled = true;
+
+          submitButton.textContent =
+            'Gönderiliyor…';
+
+        }
+
+        formStatus.textContent =
+          'Mesajınız gönderiliyor…';
+
+        formStatus.className = '';
+
+        try {
+
+          const response =
+            await fetch(
+              contactForm.action,
+              {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                  'Accept': 'application/json'
+                }
+              }
+            );
+
+          if (response.ok) {
+
+            formStatus.textContent =
+              '✓ Mesajınız başarıyla gönderildi. En kısa sürede dönüş yapacağız.';
+
+            formStatus.className =
+              'success';
+
+            contactForm.reset();
+
+          } else {
+
+            const data =
+              await response
+                .json()
+                .catch(() => ({}));
+
+            formStatus.textContent =
+              data.errors
+                ?.map(err => err.message)
+                .join(', ') ||
+              'Mesaj gönderilemedi. Lütfen tekrar deneyin.';
+
+            formStatus.className =
+              'error';
+
+          }
+
+        } catch (error) {
+
+          formStatus.textContent =
+            'Bağlantı sırasında bir sorun oluştu. Lütfen tekrar deneyin.';
+
+          formStatus.className =
+            'error';
+
+        } finally {
+
+          if (submitButton) {
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+              originalButtonText;
+
+          }
+
+        }
+
+      }
+    );
+
+  }
+
+
+  /* ---------- Premium arka plan kod akışı ---------- */
+
   (() => {
-    const canvas = document.getElementById('codeBg');
+
+    const canvas =
+      document.getElementById('codeBg');
+
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+
+    const ctx =
+      canvas.getContext('2d');
+
     if (!ctx) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion =
+      window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+
     const snippets = [
+
       'const app = await buildProject();',
+
       'automation.run(workflow);',
+
       'fetch("/api/orders")',
+
       'if (ready) deploy();',
+
       'function optimize(data) {',
+
       'return data.filter(Boolean);',
+
       'const dashboard = createUI();',
+
       'await syncInventory();',
+
       'webhook.on("message", handler);',
+
       'export default solution;',
+
       'db.query("SELECT * FROM orders");',
+
       'notify("Project ready");',
+
       'mobile.render(screen);',
+
       'integration.connect(service);'
+
     ];
 
-    let width = 0, height = 0, columns = [];
+    let width = 0;
+    let height = 0;
+    let columns = [];
+
     const fontSize = 12;
+
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = Math.floor(width * dpr);
-      canvas.height = Math.floor(height * dpr);
-      canvas.style.width = width + 'px';
-      canvas.style.height = height + 'px';
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.ceil(width / 145);
-      columns = Array.from({length: count}, (_, i) => ({
-        x: i * 145 + Math.random() * 40,
-        y: Math.random() * height,
-        speed: .14 + Math.random() * .22,
-        text: snippets[Math.floor(Math.random() * snippets.length)]
-      }));
+
+      const dpr =
+        Math.min(
+          window.devicePixelRatio || 1,
+          1.5
+        );
+
+      width =
+        window.innerWidth;
+
+      height =
+        window.innerHeight;
+
+      canvas.width =
+        Math.floor(width * dpr);
+
+      canvas.height =
+        Math.floor(height * dpr);
+
+      canvas.style.width =
+        width + 'px';
+
+      canvas.style.height =
+        height + 'px';
+
+      ctx.setTransform(
+        dpr,
+        0,
+        0,
+        dpr,
+        0,
+        0
+      );
+
+      const count =
+        Math.ceil(width / 145);
+
+      columns =
+        Array.from(
+          {
+            length: count
+          },
+          (_, i) => ({
+
+            x:
+              i * 145 +
+              Math.random() * 40,
+
+            y:
+              Math.random() *
+              height,
+
+            speed:
+              .14 +
+              Math.random() * .22,
+
+            text:
+              snippets[
+                Math.floor(
+                  Math.random() *
+                  snippets.length
+                )
+              ]
+
+          })
+        );
+
     };
 
     const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-      ctx.font = `${fontSize}px "Space Grotesk", monospace`;
+
+      ctx.clearRect(
+        0,
+        0,
+        width,
+        height
+      );
+
+      ctx.font =
+        `${fontSize}px "Space Grotesk", monospace`;
+
       columns.forEach(col => {
+
         col.y += col.speed;
-        if (col.y > height + 80) {
+
+        if (
+          col.y >
+          height + 80
+        ){
+
           col.y = -40;
-          col.text = snippets[Math.floor(Math.random() * snippets.length)];
+
+          col.text =
+            snippets[
+              Math.floor(
+                Math.random() *
+                snippets.length
+              )
+            ];
+
         }
-        ctx.fillStyle = 'rgba(91, 143, 255, .16)';
-        ctx.fillText(col.text, col.x, col.y);
-        ctx.fillStyle = 'rgba(34, 211, 238, .07)';
-        ctx.fillText(col.text, col.x, col.y + 22);
+
+        ctx.fillStyle =
+          'rgba(91, 143, 255, .16)';
+
+        ctx.fillText(
+          col.text,
+          col.x,
+          col.y
+        );
+
+        ctx.fillStyle =
+          'rgba(34, 211, 238, .07)';
+
+        ctx.fillText(
+          col.text,
+          col.x,
+          col.y + 22
+        );
+
       });
-      if (!reduceMotion) requestAnimationFrame(draw);
+
+      if (!reduceMotion)
+        requestAnimationFrame(draw);
+
     };
 
     resize();
-    window.addEventListener('resize', resize, {passive:true});
+
+    window.addEventListener(
+      'resize',
+      resize,
+      {
+        passive:true
+      }
+    );
+
     draw();
+
   })();
 
 </script>
